@@ -24,11 +24,14 @@ void print_triangle(int size)
 					_putchar('#');
 				}
 			}
-			-putchar('\n');
-		}
-		else
-		{
 			_putchar('\n');
 		}
 	}
+	else
+	{
+		_putchar('\n');
+	}
 }
+		
+	
+
