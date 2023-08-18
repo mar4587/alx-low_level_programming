@@ -17,6 +17,7 @@ int main(void)
 			if (b == a)
 			{
 				printf("%d\n", a);
+				break;
 			}
 			c = b / a;
 			b = c;
