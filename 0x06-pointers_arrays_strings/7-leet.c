@@ -21,7 +21,7 @@ char *leet(char *s)
 			{
 				s[i] = n[j];
 			}
-			j++
+			j++;
 		}
 		i++;
 	}
