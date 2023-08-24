@@ -15,11 +15,11 @@ char *_strcat(char *dest, char *src)
 	{
 
 	}
-	for (lens = 0; src[lens] = '\0'; lens++)
+	for (lens = 0; src[lens] != '\0'; lens++)
 	{
 
 	}
-	for (a = 0; a < lens; a++)
+	for (a = 0; a <= lens; a++)
 	{
 		dest[lend + a] = src[a];
 	}
