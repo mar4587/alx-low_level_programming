@@ -2,28 +2,28 @@
 
 /**
  * leet - encodes a string
- * @str: the string
- * Return: str
+ * @s: the string
+ * Return: s
  */
-char *leet(char *str)
+char *leet(char *s)
 {
 	int i, j;
 	char c[] = "aAeEoOtTlL";
 	char n[] = "4433007711";
 
 	i = 0;
-	while (str[i] != '\0')
+	while (s[i] != '\0')
 	{
 		j = 0;
 		while (c[j] != '\0')
 		{
-			if (str[i] == c[j])
+			if (s[i] == c[j])
 			{
-				str[i] = n[j];
+				s[i] = n[j];
 			}
 			j++
 		}
 		i++;
 	}
-	return (str);
+	return (s);
 }
