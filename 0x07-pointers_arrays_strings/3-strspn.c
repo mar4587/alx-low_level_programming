@@ -2,11 +2,11 @@
 /**
  * *_strchr - This locates a character
  * @s: string
- * @c: copy
+ * @accept: copy
  *
  * Return: n
  */
-char *_strchr(char *s, char c)
+unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
 	int i;
@@ -24,5 +24,5 @@ char *_strchr(char *s, char c)
 		}
 		s++;
 	}
-	return (n);
+	return (0);
 }
