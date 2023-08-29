@@ -4,23 +4,15 @@
  * @s: string
  * @c: copy
  *
- * Return: n
+ * Return: s
  */
 char *_strchr(char *s, char c)
 {
-	unsigned int n = 0;
-	int i;
-
-	while (*s)
+	while (*s >= '\0')
 	{
-		for (i = 0; accept[i]; i++)
+		if (*s == c)
 		{
-			n++;
-			break;
-		}
-		else if (accept[i + 1] == '\0')
-		{
-			return (n);
+			return (s);
 		}
 		s++;
 	}
