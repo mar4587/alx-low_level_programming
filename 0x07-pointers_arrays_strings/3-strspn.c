@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strchr - This locates a character
+ * *_strspn - This locates a character
  * @s: string
  * @accept: copy
  *
