@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strspn - This locates a character
+ * *_strspn - This gets the length of prefix
  * @s: string
  * @accept: copy
  *
@@ -15,14 +15,16 @@ unsigned int _strspn(char *s, char *accept)
 	{
 		for (i = 0; accept[i]; i++)
 		{
-			n++;
-			break;
-		}
+			if (*s == accept[i])
+			{
+				n++;
+				break;
+			}
 		else if (accept[i + 1] == '\0')
 		{
 			return (n);
 		}
 		s++;
 	}
-	return (n);
+	return (0);
 }
