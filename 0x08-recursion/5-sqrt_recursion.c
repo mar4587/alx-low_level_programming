@@ -18,3 +18,13 @@ int sqrt_a(int a, int b)
 	}
 	return (sqrt_a(a, b + 1));
 }
+/**
+ * _sqrt_recursion - returns the natural square root of
+ * a number
+ * @n: the input number
+ * Return: natural square root
+ */
+int _sqrt_recursion(int n)
+{
+	return (sqrt_a(n, 0));
+}
