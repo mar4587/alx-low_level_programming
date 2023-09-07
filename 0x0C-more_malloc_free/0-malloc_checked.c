@@ -1,19 +1,18 @@
-#include <stdlib.h>
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * malloc_checked - allocate memory
- * @b: byte number
- *
- * Return:pointer to the allocated memory
+ * malloc_checked - This is the Main Entry
+ * @b: input
+ * Return: y
  */
-	void *malloc_checked(unsigned int b);
+void *malloc_checked(unsigned int b)
 {
-	void *ptr;
-	{ptr = malloc(b);	
-	{
-	if (ptr == NULL);
-	}
-	exit(98);
-	}
-	Return(ptr) = (succesful)
+	void *y;
+
+	y = malloc(b);
+	if (y == NULL)
+		exit(98);
+	return (y);
 }
+
