@@ -1,10 +1,11 @@
+#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 
 /**
  * is_digit - This checks the digit
- * @s:the string
+ * @s: the string
  *
  * Return: 0 or 1
  */
@@ -24,7 +25,7 @@ int is_digit(char *s)
 
 /**
  * _strlen - returns the string length
- * @s:the string 
+ * @s: the string 
  *
  * Return: i
  */
@@ -90,11 +91,11 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			putchar(result[i] + '0');
+			_putchar(result[i] + '0');
 	}
 	if (!a)
-		putchar('0');
-	putchar('\n');
+		_putchar('0');
+	_putchar('\n');
 	free(result);
 	return (0);
 }
