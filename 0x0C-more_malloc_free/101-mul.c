@@ -17,7 +17,7 @@ int is_digit(char *s)
 	while (s[i])
 	{
 		if (s[i] < '0' || s[i] > '9')
-		return (0);
+			return (0);
 		i++;
 	}
 	return (1);
@@ -91,11 +91,11 @@ int main(int argc, char *argv[])
 		if (result[i])
 			a = 1;
 		if (a)
-			putchar(result[i] + '0');
+			_putchar(result[i] + '0');
 	}
 	if (!a)
-		putchar('0');
-	putchar('\n');
+		_putchar('0');
+	_putchar('\n');
 	free(result);
 	return (0);
 }
