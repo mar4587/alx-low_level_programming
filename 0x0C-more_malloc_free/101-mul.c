@@ -25,7 +25,7 @@ int is_digit(char *s)
 
 /**
  * _strlen - returns the string length
- * @s: the string 
+ * @s:the string 
  *
  * Return: i
  */
