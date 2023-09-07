@@ -1,11 +1,10 @@
-#include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
 
 
 /**
  * is_digit - This checks the digit
- * @s: the string
+ * @s:the string
  *
  * Return: 0 or 1
  */
