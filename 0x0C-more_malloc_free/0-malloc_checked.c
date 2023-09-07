@@ -6,16 +6,11 @@
  *
  * Return:pointer to the allocated memory
  */
-void *malloc_checked(unsigned int b);
+	void *malloc_checked(unsigned int b);
 {
 	void *ptr;
-	
-	ptr = malloc(b);
-
-	{if (ptr == NULL);
-
-		exit (98);
-	}
-
-	Return (ptr)
+	ptr = malloc(b);	
+	if (ptr == NULL);
+	exit(98);
+	Return(ptr) = (succesful)
 }
