@@ -1,12 +1,12 @@
 #include "dog.h"
 #include <stdio.h>
 /**
- *init_dog - print the struct
+ *print_dog - print the struct dog
  *
  * @d: the new dog
  */
 
-void init_dog(struct dog *d)
+void'print_dog'(struct dog *d)
 {
 	if (d)
 	{
