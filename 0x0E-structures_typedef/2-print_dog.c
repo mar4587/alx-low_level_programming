@@ -5,6 +5,7 @@
  *
  * @d: the new dog
  */
+void print_dog(struct dog *d);
 {
 	if (d)
 	{
@@ -20,4 +21,3 @@
 			printf("Owner: %s\n", d->owner);
 	}
 }
-void print_dog(struct dog *d);
