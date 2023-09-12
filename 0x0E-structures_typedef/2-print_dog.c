@@ -6,7 +6,7 @@
  * @d: the new dog
  */
 
-void print_dog(struct *d)
+void print_dog(struct dog *d)
 {
 	if (d)
 	{
