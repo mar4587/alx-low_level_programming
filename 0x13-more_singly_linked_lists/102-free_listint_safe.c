@@ -17,7 +17,7 @@ void free_listp2(listp_t **head)
 		node1 = *head;
 		while ((temp = node1) != NULL)
 		{
-			node1 = curr->next;
+			node1 = node1->next;
 			free(temp);
 		}
 		*head = NULL;
