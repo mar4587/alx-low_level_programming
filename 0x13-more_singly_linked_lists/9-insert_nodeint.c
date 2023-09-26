@@ -34,7 +34,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	while (node1 && cont != index)
 	{
 		cont++;
-		node1 = aux_node->next;
+		node1 = node1->next;
 	}
 
 	/* general case */
