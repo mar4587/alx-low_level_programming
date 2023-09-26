@@ -1,44 +1,71 @@
 #include "lists.h"
 
 /**
- * free_listint_safe - This function that frees a listint_t list
- * @h: the pointer
+ * free_listp - This frees a linked list
+ * @head: the pointer
  *
- * Return: the size of the list, otherwise 0
+ * Return: no return
  *
  */
-
-size_t free_listint_safe(listint_t **h)
+void free_listp(listp_t **head)
 {
-	listint_t *node1;
-	listnode_t *nodes = NULL; /* stores address of nodes */
-	size_t nums = 0;
+	listp_t *temp;
+	listp_t *y;
 
-	if (h == NULL)
-		return (0);
-
-	/* while you have not ennumsered a loop */
-	while (!is_in_nodes(nodes, *h))
+	if (head != NULL)
 	{
-		/* check if the malloc fails then exit */
-		if (!add_nodeptr(&nodes, *h))
+		y = *head;
+		while ((temp = y) != NULL)
 		{
-			free_listnode(nodes);
-			exit(98);
+			y = y->next;
+			free(temp);
 		}
-		node1 = *h;
-		*h = (*h)->next;
-		free(node1);
-		nums++;
+
+		*head = NULL;
 	}
-	/* if you ennumser a loop */
-	if (*h != NULL)
-		*h = NULL;
+}
 
-	/* print where the loop starts */
-	/*	printf("-> [%p] %d\n", (void *)head, head->n); */
-	free_listnode(nodes);
-	/* return number of nodes */
+/**
+ * print_listint_safe - This prints a linked list
+ * @head: the pointer
+ *
+ * Return: nodes
+ */
+size_t print_listint_safe(const listint_t *head)
+{
+	size_t x = 0;
+	listp_t *hptr, *new, *add;
 
-	return (nums);
+	hptr = NULL;
+	while (head != NULL)
+	{
+		new = malloc(sizeof(listp_t));
+
+		if (new == NULL)
+			exit(98);
+
+		new->p = (void *)head;
+		new->next = hptr;
+		hptr = new;
+
+		add = hptr;
+		while (add->next != NULL)
+		{
+			add = add->next;
+			if (head == add->p)
+			{
+				printf("-> [%p] %d\n", (void *)head, head->n);
+				free_listp(&hptr);
+				return (x);
+			}
+		}
+
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		x++;
+	}
+
+	free_listp(&hptr);
+
+	return (x);
 }
