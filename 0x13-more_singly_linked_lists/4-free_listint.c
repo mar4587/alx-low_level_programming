@@ -20,7 +20,7 @@ void free_listint(listint_t *head)
 		{
 			free(node1);
 			node1 = node2;
-			node2 = next_node->next;
+			node2 = node2->next;
 		}
 		free(node1);
 	}
