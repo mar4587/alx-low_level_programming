@@ -1,13 +1,13 @@
 #include "main.h"
 /**
- * binary_to_rent - This converts a binary number to
+ * binary_to_uint - This converts a binary number to
  * an unsigned int
  * @b: pointer
  *
  * Return: the unsigned int
  *
  */
-unsigned int binary_to_rent(const char *b)
+unsigned int binary_to_uint(const char *b)
 {
 	unsigned int re;
 	int len, bin;
