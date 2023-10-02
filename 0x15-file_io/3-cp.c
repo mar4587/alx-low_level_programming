@@ -50,13 +50,12 @@ void close_file(int fd)
  * @argv: the arguments
  *
  * Return: 0
- *
+ * Description: If the argument count is incorrect - exit code 97
  */
 int main(int argc, char *argv[])
 {
 	int sr, to;
 	int v, w;
-
 	char *buffer;
 
 	if (argc != 3)
