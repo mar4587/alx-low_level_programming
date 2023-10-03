@@ -1,4 +1,6 @@
 #include "main.h"
+#include <unistd.h>
+#include <stdio.h>
 /**
  * error_file - Copies the content of a
  * of a file to another file
